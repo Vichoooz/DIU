@@ -12,3 +12,9 @@ Instrucciones:
 > npm install
 
 > npm run dev
+
+# Metas #
+
+ * Ver Perfil
+ * Publicar Servicio
+ * Buscar Servicio
