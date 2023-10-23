@@ -27,9 +27,8 @@ export const InternalPage = () => {
 
   return (
     <div style={centerStyle}>
-      <h1 className='page__title'>Frontend Sample App</h1>
       <NavBar />
-      <h2>Mi perfil</h2>
+      <div className='page'>
       <h1>¡Hola, {userName}!</h1>
       <img src={Perfil} height={250} alt='Imagen del usuario' />
       {editing ? (
@@ -51,6 +50,7 @@ export const InternalPage = () => {
           </Button>
         </div>
       )}
+      </div>
     </div>
   );
 }

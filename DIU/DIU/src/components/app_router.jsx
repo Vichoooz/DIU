@@ -12,7 +12,7 @@ const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<HomePage />} />
+        <Route path='/' element={<InternalPage />} />
         <Route path='/profile' element={<InternalPage />} />
         <Route path='/fav' element={<FavoritePage />} />
         <Route path='/searchserv' element={<BuscarPage />} />

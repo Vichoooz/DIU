@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import NavBar from '../components/nav_bar';
-import { TextField, Button, Select, MenuItem } from '@mui/material';
+import { TextField, Button, Select, MenuItem , InputLabel , FormControl} from '@mui/material';
 
 const centerStyle = {
   display: 'flex',
@@ -23,44 +23,65 @@ const PublicPage = () => {
 
   return (
     <div style={centerStyle}>
-      <h1 className='page__title'>Frontend Sample App</h1>
       <NavBar />
-      <h2>Publicar Servicio</h2>
-
+      <div className='page'>
+      <h1 className='page__title'>Publicar Servicio</h1>
       <form>
         <TextField
           label="Nombre del Servicio"
           value={servicio}
           onChange={(e) => setServicio(e.target.value)}
         />
+        <br></br> <br></br>
         <TextField
           label="Descripción"
           value={descripcion}
           onChange={(e) => setDescripcion(e.target.value)}
         />
+        <br></br> <br></br>
         <TextField
           label="Precio"
           value={precio}
           onChange={(e) => setPrecio(e.target.value)}
         />
+        <br></br> <br></br>
         <TextField
           label="Ubicación"
           value={ubicacion}
           onChange={(e) => setUbicacion(e.target.value)}
         />
-        <Select
-          label="Categoría"
-          value={categoria}
-          onChange={(e) => setCategoria(e.target.value)}
+        <br></br> <br></br>
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Categoría</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            label="Categoría"
+            value={categoria}
+            onChange={(e) => setCategoria(e.target.value)}
+          >
+            <MenuItem value="jardineria">Jardinería</MenuItem>
+            <MenuItem value="limpieza">Limpieza</MenuItem>
+            {/* Agrega más categorías según tus necesidades */}
+          </Select>
+        </FormControl>
+        <br></br> <br></br>
+        <Button
+          variant="contained"
+          onClick={handleSearch}
+          href="searchservJardinero"
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
         >
-          <MenuItem value="jardineria">Jardinería</MenuItem>
-          <MenuItem value="limpieza">Limpieza</MenuItem>
-          {/* Agrega más categorías según tus necesidades */}
-        </Select>
-        <Button variant="contained" onClick={handleSearch} href="searchservJardinero">
-            Publicar
+          Publicar
         </Button>
+
+
+
       </form>
+      </div>
     </div>
   );
 };
