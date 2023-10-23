@@ -1,5 +1,9 @@
-# DIU # 
+# Entrega 8 Diseño de Interfaces Usuarias # 
+Integrantes:
+  Vicente Muñoz, vicente.munozr@usm.cl
+  Ernesto Barría, ernesto.barria@usm.cl
+  Israel Vergara, israel.vergara@sansano.usm.cl
 
-Instruciones: 
-npm install
-npm run dev
+Instrucciones: 
+> npm install
+> npm run dev
