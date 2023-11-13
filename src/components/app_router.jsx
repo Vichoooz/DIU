@@ -7,6 +7,7 @@ import FavoritePage from '../pages/favorite'
 import BuscarPage from '../pages/buscar'
 import BuscarPage1 from '../pages/buscarJardinero'
 import PublicarPage from '../pages/Publicar'
+import ChatApp from '../pages/chat'
 
 const AppRouter = () => {
   return (
@@ -18,6 +19,7 @@ const AppRouter = () => {
         <Route path='/searchserv' element={<BuscarPage />} />
         <Route path='/searchservJardinero' element={<BuscarPage1 />} />
         <Route path='/publicserv' element={<PublicarPage />} />
+        <Route path='/chat' element={<ChatApp />} />
         <Route path='*' element={<h1>Not Found 404</h1>} />
   
       </Routes>

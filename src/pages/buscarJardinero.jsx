@@ -30,11 +30,14 @@ const BuscarPage = () => {
 
   const comentarioAleatorio = obtenerComentarioAleatorio();
 
+  const handleClick = () => {
+    history.push('/chat');
+  };
+
   return (
     <div style={centerStyle}>
-      <h1 className='page__title'>Frontend Sample App</h1>
       <NavBar />
-      <h2>Búsqueda de Servicio</h2>
+      <h1>Búsqueda de Servicio</h1>
 
       <div>
         <h3>Jardinero Disponible:</h3>
@@ -48,6 +51,10 @@ const BuscarPage = () => {
       </div>
        <Button variant="contained" onClick={() => { /* No hacer nada */ }}>
         Contratar
+      </Button>
+
+      <Button variant="contained" onClick={handleClick} href="chat">
+        Chatear
       </Button>
 
       {/* Aquí puedes agregar un componente de Google Maps si lo necesitas */}

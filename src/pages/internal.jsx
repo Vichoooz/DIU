@@ -28,28 +28,29 @@ export const InternalPage = () => {
   return (
     <div style={centerStyle}>
       <NavBar />
-      <div className='page'>
-      <h1>¡Hola, {userName}!</h1>
-      <img src={Perfil} height={250} alt='Imagen del usuario' />
-      {editing ? (
-        <div>
-          <TextField
-            label="Nuevo Nombre"
-            value={newName}
-            onChange={(e) => setNewName(e.target.value)}
-          />
-          <Button variant='contained' onClick={handleSave}>
-            Actualizar
-          </Button>
-        </div>
-      ) : (
-        <div>
-          <p>Nombre de Usuario: {userName}</p>
-          <Button variant='contained' onClick={handleEdit}>
-            Cambiar Nombre
-          </Button>
-        </div>
-      )}
+      <div className='page' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+        <h1>{userName}</h1>
+
+        <img src={Perfil} height={250} alt='Imagen del usuario' />
+        {editing ? (
+          <div>
+            <TextField
+              label="Nuevo Nombre"
+              value={newName}
+              onChange={(e) => setNewName(e.target.value)}
+            />
+            <Button variant='contained' onClick={handleSave}>
+              Actualizar
+            </Button>
+          </div>
+        ) : (
+          <div>
+            <p>Nombre de Usuario: {userName}</p>
+            <Button variant='contained' onClick={handleEdit}>
+              Cambiar Nombre
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );
