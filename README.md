@@ -15,6 +15,6 @@ Instrucciones:
 
 # Metas #
 
- * Ver Perfil
+ * Chatear con persona que ofrezca algún servicio.
  * Publicar Servicio
  * Buscar Servicio
