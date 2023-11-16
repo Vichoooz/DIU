@@ -49,11 +49,11 @@ const BuscarPage = () => {
         <h3>Comentario:</h3>
         <p>{comentarioAleatorio}</p>
       </div>
-       <Button variant="contained" onClick={() => { /* No hacer nada */ }}>
+       <Button color= "inherit" variant="contained" onClick={() => { /* No hacer nada */ }}>
         Contratar
       </Button>
-
-      <Button variant="contained" onClick={handleClick} href="chat">
+      <br />
+      <Button color= "inherit" variant="contained" onClick={handleClick} href="chat">
         Chatear
       </Button>
 

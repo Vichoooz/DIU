@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import NavBar from '../components/nav_bar';
-import { TextField, Button, Select, MenuItem , InputLabel , FormControl} from '@mui/material';
+import { TextField, Button, Select, MenuItem , InputLabel , FormControl, Box} from '@mui/material';
 
 const centerStyle = {
   display: 'flex',
@@ -24,36 +24,43 @@ const PublicPage = () => {
   return (
     <div style={centerStyle}>
       <NavBar />
+      <Box textAlign='center'>
       <div className='page'>
+      
       <h1 className='page__title'>Publicar Servicio</h1>
       <form>
         <TextField
+          color='success'
           label="Nombre del Servicio"
           value={servicio}
           onChange={(e) => setServicio(e.target.value)}
         />
         <br></br> <br></br>
         <TextField
+          color='success'
           label="Descripción"
           value={descripcion}
           onChange={(e) => setDescripcion(e.target.value)}
         />
         <br></br> <br></br>
         <TextField
+          color='success'
           label="Precio"
           value={precio}
           onChange={(e) => setPrecio(e.target.value)}
         />
         <br></br> <br></br>
         <TextField
+          color='success'
           label="Ubicación"
           value={ubicacion}
           onChange={(e) => setUbicacion(e.target.value)}
         />
         <br></br> <br></br>
         <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Categoría</InputLabel>
+          <InputLabel id="demo-simple-select-label" color='success'>Categoría</InputLabel>
           <Select
+            color='success'
             labelId="demo-simple-select-label"
             label="Categoría"
             value={categoria}
@@ -66,6 +73,7 @@ const PublicPage = () => {
         </FormControl>
         <br></br> <br></br>
         <Button
+          color="inherit"
           variant="contained"
           onClick={handleSearch}
           href="searchservJardinero"
@@ -77,11 +85,13 @@ const PublicPage = () => {
         >
           Publicar
         </Button>
-
+        
 
 
       </form>
+      
       </div>
+      </Box>
     </div>
   );
 };

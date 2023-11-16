@@ -13,6 +13,7 @@ const ChatMessage = ({ message, isUserMessage }) => {
         padding: '10px',
         backgroundColor,
         borderRadius: '5px',
+        
         alignSelf: isUserMessage ? 'flex-end' : 'flex-start',
         color: isUserMessage ? '#000' : '#000', // Cambia el color del texto según tus preferencias
       }}
@@ -37,7 +38,7 @@ const ChatInput = ({ onSendMessage }) => {
   };
 
   return (
-    <div style={{ marginTop: '10px', display: 'flex' }}>
+    <div style={{ marginTop: '10px', display: 'flex'}}>
       <input
         type="text"
         value={message}
@@ -69,12 +70,12 @@ const ChatApp = () => {
   };
 
   return (
-    <div style={{ maxWidth: '400px', margin: 'auto', marginTop: '50px' }}>
-      <Button variant="contained" onClick={handleClick} href="searchservJardinero">
+    <div style={{ maxWidth: '400px', margin: 'auto', marginTop: '300px'}}>
+      <Button color= "inherit" variant="contained" onClick={handleClick} href="searchservJardinero">
         Volver
       </Button>
       <h2>{userName}</h2>
-      <div style={{ border: '1px solid #ccc', padding: '10px', maxHeight: '300px', overflowY: 'auto' }}>
+      <div style={{ border: '1px solid #ccc', padding: '10px', maxHeight: '300px', overflowY: 'auto'}}>
         {messages.map((msg, index) => (
           <ChatMessage key={index} message={msg.text} isUserMessage={msg.isUserMessage} />
         ))}

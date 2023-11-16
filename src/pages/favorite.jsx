@@ -27,6 +27,7 @@ const FavoritePage = () => {
             <li key={item.id}>{item.name}</li>
           ))}
         </ul>
+        
       </div></></div>
   );
 }

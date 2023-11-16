@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, TextField } from '@mui/material';
+import { Button, TextField, Box} from '@mui/material';
 import NavBar from '../components/nav_bar';
 import Perfil from '../assets/user.png';
 
@@ -29,28 +29,33 @@ export const InternalPage = () => {
     <div style={centerStyle}>
       <NavBar />
       <div className='page' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+        <Box textAlign='center'>
         <h1>{userName}</h1>
 
-        <img src={Perfil} height={250} alt='Imagen del usuario' />
+        <img src={Perfil} height={200} alt='Imagen del usuario' />
         {editing ? (
           <div>
+            <br />
             <TextField
+              color= "success" 
               label="Nuevo Nombre"
               value={newName}
               onChange={(e) => setNewName(e.target.value)}
             />
-            <Button variant='contained' onClick={handleSave}>
+            <br /><br />
+            <Button color="inherit" variant='contained' onClick={handleSave}>
               Actualizar
             </Button>
           </div>
         ) : (
           <div>
-            <p>Nombre de Usuario: {userName}</p>
-            <Button variant='contained' onClick={handleEdit}>
+            <br />
+            <Button color='inherit' variant='contained' onClick={handleEdit}>
               Cambiar Nombre
             </Button>
           </div>
         )}
+        </Box>
       </div>
     </div>
   );
